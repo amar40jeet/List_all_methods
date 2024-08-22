@@ -1,0 +1,58 @@
+# Starting with an empty list
+my_list = []
+
+# 1. append(): Add elements to the list
+my_list.append(1)
+my_list.append(2)
+my_list.append(3)
+print("After append:", my_list)  # Output: [1, 2, 3]
+
+# 2. extend(): Extend the list with another list
+my_list.extend([4, 5])
+print("After extend:", my_list)  # Output: [1, 2, 3, 4, 5]
+
+# 3. insert(): Insert an element at a specific position
+my_list.insert(2, 'a')
+print("After insert:", my_list)  # Output: [1, 2, 'a', 3, 4, 5]
+
+# 4. remove(): Remove the first occurrence of a value
+my_list.remove('a')
+print("After remove:", my_list)  # Output: [1, 2, 3, 4, 5]
+
+# 5. pop(): Remove and return the element at the specified position
+popped_item = my_list.pop(3)
+print("After pop:", my_list)     # Output: [1, 2, 3, 5]
+print("Popped item:", popped_item)  # Output: 4
+
+# 6. clear(): Remove all elements from the list
+temp_list = my_list.copy()  # Copying the list to use later
+my_list.clear()
+print("After clear:", my_list)  # Output: []
+
+# Restore the list from temp_list
+my_list = temp_list
+
+# 7. index(): Get the index of the first occurrence of a value
+index_of_2 = my_list.index(2)
+print("Index of 2:", index_of_2)  # Output: 1
+
+# 8. count(): Count the occurrences of a value
+count_of_3 = my_list.count(3)
+print("Count of 3:", count_of_3)  # Output: 1
+
+# 9. sort(): Sort the list in ascending order
+my_list.extend([3, 1, 2])  # Adding some more elements to sort
+my_list.sort()
+print("After sort:", my_list)  # Output: [1, 1, 2, 2, 3, 3, 5]
+
+# 10. reverse(): Reverse the list
+my_list.reverse()
+print("After reverse:", my_list)  # Output: [5, 3, 3, 2, 2, 1, 1]
+
+# 11. copy(): Create a shallow copy of the list
+copied_list = my_list.copy()
+print("Copied list:", copied_list)  # Output: [5, 3, 3, 2, 2, 1, 1]
+
+# 12. len(): Get the length of the list
+length_of_list = len(my_list)
+print("Length of list:", length_of_list)  # Output: 7
